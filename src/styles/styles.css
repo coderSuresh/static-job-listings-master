@@ -526,17 +526,9 @@ video {
   height: 5rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.bg-red-900 {
+.bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
-}
-
-.bg-hero-pattern-desktop {
-  background-image: url('/src/images/bg-header-desktop.svg');
+  background-color: hsl(180 29% 50% / var(--tw-bg-opacity));
 }
 
 .bg-hero-pattern-mobile {
