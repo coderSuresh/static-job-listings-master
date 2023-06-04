@@ -539,3 +539,14 @@ video {
   font-weight: 700;
 }
 
+:root {
+  --primary: hsl(180, 29%, 50%);
+  --bg: hsl(180, 52%, 96%);
+  --light-cyan: hsl(180, 31%, 95%);
+  --grayish-cyan: hsl(180, 8%, 52%);
+  --dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+}
