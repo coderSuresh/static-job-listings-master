@@ -3,7 +3,8 @@ import React from 'react'
 function App() {
   return (
     <>
-      <h1 className='font-bold text-2xl text-center mt-10'>Hello, world!</h1>
+      <header className='h-20 bg-hero-pattern-mobile md:bg-hero-pattern-desktop'>
+      </header>
     </>
   )
 }
