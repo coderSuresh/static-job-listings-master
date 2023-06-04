@@ -4,6 +4,7 @@
 
 :root {
     --primary: hsl(180, 29%, 50%);
+    --shadow-color: hsl(180, 29%, 50%, 0.3);
     --bg: hsl(180, 52%, 96%);
     --light-cyan: hsl(180, 31%, 95%);
     --grayish-cyan: hsl(180, 8%, 52%);

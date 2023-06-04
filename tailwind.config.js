@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.jsx", "./src/**/*.js"],
+  content: ["./src/**/*.jsx", "./src/**/*.js", "./index.html"],
   theme: {
     extend: {
       backgroundImage: {
@@ -8,11 +8,12 @@ export default {
         'hero-pattern-mobile': "url('/src/images/bg-header-mobile.svg')",
       },
       colors: {
-        'primary': 'hsl(180, 29%, 50%)',
-        'bg': 'hsl(180, 52%, 96%)',
-        'light-cyan': 'hsl(180, 31%, 95%)',
-        'grayish-cyan': 'hsl(180, 8%, 52%)',
-        'dark-grayish-cyan': 'hsl(180, 14%, 20%)',
+        'primary': 'var(--primary)',
+        'shadow-color': 'var(--shadow-color)',
+        'bg': 'var(--bg)',
+        'light-cyan': 'var(--light-cyan)',
+        'grayish-cyan': 'var(--grayish-cyan)',
+        'dark-grayish-cyan': 'var(--dark-grayish-cyan)',
       },
     },
     plugins: [],
