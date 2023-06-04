@@ -625,8 +625,16 @@ video {
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-between {
@@ -765,6 +773,10 @@ video {
   padding-bottom: 1rem;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -815,6 +827,14 @@ body {
   font-family: 'League Spartan', sans-serif;
 }
 
+.hover\:bg-primary:hover {
+  background-color: var(--primary);
+}
+
+.hover\:text-light-cyan:hover {
+  color: var(--light-cyan);
+}
+
 @media (min-width: 768px) {
   .md\:relative {
     position: relative;
@@ -863,6 +883,10 @@ body {
 
   .md\:max-w-3xl {
     max-width: 48rem;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
   }
 
   .md\:border-none {
