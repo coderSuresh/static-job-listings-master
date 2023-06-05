@@ -19,7 +19,6 @@ const Card = ({ data }) => {
                         <NewOrFeatured isNew={isNew} isFeatured={isFeatured} />
                     </div>
 
-
                     <h2 className='font-semibold mt-2 text-xl hover:text-primary cursor-pointer'>{position}</h2>
 
                     <MoreInfo postedAt={postedAt} location={location} contract={contract} />
