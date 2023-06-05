@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import Card from './components/Card'
+import Filter from './components/Filter'
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
     <>
       <Header />
       <main className="my-10">
+        <Filter />
         {cardElems}
       </main>
     </>
