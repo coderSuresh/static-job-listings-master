@@ -542,6 +542,10 @@ video {
   margin: 1.25rem;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -806,6 +810,14 @@ body {
 
   .md\:h-24 {
     height: 6rem;
+  }
+
+  .md\:h-2 {
+    height: 0.5rem;
+  }
+
+  .md\:h-28 {
+    height: 7rem;
   }
 
   .md\:w-24 {

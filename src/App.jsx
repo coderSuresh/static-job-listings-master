@@ -10,7 +10,7 @@ const App = () => {
     const fetchData = async () => {
       const res = await fetch("../../data.json")
       const data = await res.json()
-      setJobs(() => data)
+      setJobs(data)
     }
 
     fetchData()
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="m-5">
+      <div className="my-10">
         {cardElems}
       </div>
     </>
