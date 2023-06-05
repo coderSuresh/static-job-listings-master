@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern-desktop': "url('/src/images/bg-header-desktop.svg')",
-        'hero-pattern-mobile': "url('/src/images/bg-header-mobile.svg')",
+        'hero-pattern-desktop': "url('/images/bg-header-desktop.svg')",
+        'hero-pattern-mobile': "url('/images/bg-header-mobile.svg')",
       },
       colors: {
         'primary': 'var(--primary)',
