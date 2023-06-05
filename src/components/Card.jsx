@@ -1,6 +1,8 @@
 import Technologies from "./Technologies"
+import MoreInfo from "./MoreInfo"
+import NewOrFeatured from "./NewOrFeatured"
 
-const Card = ({data}) => {
+const Card = ({ data }) => {
 
     const { company, logo, new: isNew, featured: isFeatured, position, role, level, postedAt, contract, location, languages, tools } = data
     const tech = [role, level, ...languages, ...tools]
@@ -11,28 +13,16 @@ const Card = ({data}) => {
 
                 <img src={logo} className='md:w-24 md:h-24 w-12 h-12 rounded-full md:relative md:left-0 md:top-0 absolute left-4 top-[-1.5rem]' alt="company logo" />
 
-                <div className='mt-4'>
+                <div className='md:mt-0 mt-4'>
                     <div className='flex gap-4'>
                         <p className='text-primary'>{company}</p>
-                        {
-                            isNew || isFeatured ?
-                                <div className='flex gap-2'>
-                                    {isNew && <div className='rounded-xl bg-primary text-white px-3'>New!</div>}
-                                    {isFeatured && <div className='rounded-xl bg-black text-white px-3'>Featured</div>}
-                                </div>
-                                : ""
-                        }
+                        <NewOrFeatured isNew={isNew} isFeatured={isFeatured} />
                     </div>
+
 
                     <h2 className='font-semibold mt-2 text-xl hover:text-primary cursor-pointer'>{position}</h2>
 
-                    <div className='flex text-sm items-center gap-x-4 mt-2'>
-                        <p className='text-grayish-cyan'>{postedAt}</p>
-                        <span className='h-1 w-1 bg-grayish-cyan rounded-full'></span>
-                        <p className='text-grayish-cyan'>{contract}</p>
-                        <span className='h-1 w-1 bg-grayish-cyan rounded-full'></span>
-                        <p className='text-grayish-cyan'>{location}</p>
-                    </div>
+                    <MoreInfo postedAt={postedAt} location={location} contract={contract} />
                 </div>
 
             </div>
