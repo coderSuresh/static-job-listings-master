@@ -24,7 +24,7 @@ const Card = (data) => {
                         }
                     </div>
 
-                    <h2 className='font-semibold mt-2 text-xl'>{position}</h2>
+                    <h2 className='font-semibold mt-2 text-xl hover:text-primary cursor-pointer'>{position}</h2>
 
                     <div className='flex text-sm items-center gap-x-4 mt-2'>
                         <p className='text-grayish-cyan'>{postedAt}</p>

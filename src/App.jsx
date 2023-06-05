@@ -21,9 +21,9 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="my-10">
+      <main className="my-10">
         {cardElems}
-      </div>
+      </main>
     </>
   )
 }
