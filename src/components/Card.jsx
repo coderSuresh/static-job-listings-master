@@ -1,8 +1,8 @@
 import Technologies from "./Technologies"
 
-const Card = (data) => {
+const Card = ({data}) => {
 
-    const { company, logo, new: isNew, featured: isFeatured, position, role, level, postedAt, contract, location, languages, tools } = data.data
+    const { company, logo, new: isNew, featured: isFeatured, position, role, level, postedAt, contract, location, languages, tools } = data
     const tech = [role, level, ...languages, ...tools]
 
     return (
