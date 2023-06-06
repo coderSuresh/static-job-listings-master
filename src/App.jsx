@@ -21,7 +21,10 @@ const App = () => {
   }, [])
 
   React.useEffect(() => {
-    if (filter.length > 0) setIsFiltered(true)
+    if (filter.length > 0)
+      setIsFiltered(true)
+    else
+      setIsFiltered(false)
     console.log(filter)
   }, [filter])
 

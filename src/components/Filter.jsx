@@ -1,9 +1,13 @@
 const Filter = ({ filter, setFilter, setIsFiltered }) => {
 
+    const removeOneChip = (clickedTechChip) => {
+        setFilter(() => filter.filter(current => current !== clickedTechChip))
+    }
+
     const filterChips = filter.map((f, i) =>
         <div className="flex" key={i}>
             <p className='rounded-l-md bg-light-cyan text-primary font-bold px-3 py-1'>{f}</p>
-            <button className="hover:bg-dark-grayish-cyan bg-primary p-2 rounded-r-md">
+            <button onClick={() => removeOneChip(f)} className="hover:bg-dark-grayish-cyan bg-primary p-2 rounded-r-md">
                 <img src="/images/icon-remove.svg" alt="remove" />
             </button>
         </div>
