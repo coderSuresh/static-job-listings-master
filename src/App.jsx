@@ -26,11 +26,6 @@ const App = () => {
     }
   }, [filter, originalJobs])
 
-  const handleFilterRemove = (removedFilter) => {
-    const updatedFilter = filter.filter((f) => f !== removedFilter)
-    setFilter(updatedFilter)
-  }
-
   const cardElems = jobs.length > 0 ? (
     jobs.map((job) => (
       <Card
@@ -39,7 +34,6 @@ const App = () => {
         filter={filter}
         setIsFiltered={setIsFiltered}
         setFilter={setFilter}
-        handleFilterRemove={handleFilterRemove}
       />
     ))
   ) : (
@@ -53,8 +47,7 @@ const App = () => {
         {isFiltered && (
           <Filter filter={filter}
             setFilter={setFilter}
-            setIsFiltered={setIsFiltered}
-            handleFilterRemove={handleFilterRemove} />
+            setIsFiltered={setIsFiltered} />
         )}
         {cardElems}
       </main>
