@@ -25,7 +25,6 @@ const App = () => {
       setIsFiltered(true)
     else
       setIsFiltered(false)
-    console.log(filter)
   }, [filter])
 
   const cardElems = jobs.map(job => <Card key={job.id} data={job} filter={filter} setIsFiltered={setIsFiltered} setFilter={setFilter} />)
