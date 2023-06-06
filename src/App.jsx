@@ -51,7 +51,10 @@ const App = () => {
       <Header />
       <main className="my-10">
         {isFiltered && (
-          <Filter filter={filter} setFilter={setFilter} setIsFiltered={setIsFiltered} handleFilterRemove={handleFilterRemove} />
+          <Filter filter={filter}
+            setFilter={setFilter}
+            setIsFiltered={setIsFiltered}
+            handleFilterRemove={handleFilterRemove} />
         )}
         {cardElems}
       </main>
