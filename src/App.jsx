@@ -6,6 +6,9 @@ import Filter from './components/Filter'
 const App = () => {
 
   const [jobs, setJobs] = React.useState([])
+  const [filter, setFilter] = React.useState([])
+  const [filteredJobs, setFilteredJobs] = React.useState([])
+  const [isFiltered, setIsFiltered] = React.useState(false)
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -18,12 +21,12 @@ const App = () => {
   }, [])
 
   const cardElems = jobs.map(job => <Card key={job.id} data={job} />)
-  
+
   return (
     <>
       <Header />
       <main className="my-10">
-        <Filter />
+        {isFiltered && <Filter filterBy={filteredJobs} setFilteredJobs={setFilteredJobs} />}
         {cardElems}
       </main>
     </>
