@@ -7,7 +7,7 @@ const App = () => {
 
   const [jobs, setJobs] = React.useState([])
   const [filter, setFilter] = React.useState([])
-  const [filteredJobs, setFilteredJobs] = React.useState([])
+  // const [filteredJobs, setFilteredJobs] = React.useState([])
   const [isFiltered, setIsFiltered] = React.useState(false)
 
   React.useEffect(() => {
@@ -20,13 +20,18 @@ const App = () => {
     fetchData()
   }, [])
 
-  const cardElems = jobs.map(job => <Card key={job.id} data={job} />)
+  React.useEffect(() => {
+    if (filter.length > 0) setIsFiltered(true)
+    console.log(filter)
+  }, [filter])
+
+  const cardElems = jobs.map(job => <Card key={job.id} data={job} filter={filter} setIsFiltered={setIsFiltered} setFilter={setFilter} />)
 
   return (
     <>
       <Header />
       <main className="my-10">
-        {isFiltered && <Filter filterBy={filteredJobs} setFilteredJobs={setFilteredJobs} />}
+        {isFiltered && <Filter filter={filter} setFilter={setFilter} setIsFiltered={setIsFiltered} />}
         {cardElems}
       </main>
     </>

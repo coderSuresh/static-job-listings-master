@@ -2,7 +2,7 @@ import Technologies from "./Technologies"
 import MoreInfo from "./MoreInfo"
 import NewOrFeatured from "./NewOrFeatured"
 
-const Card = ({ data }) => {
+const Card = ({ data, isFiltered, filter, setFilter, setIsFiltered }) => {
 
     const { company, logo, new: isNew, featured: isFeatured, position, role, level, postedAt, contract, location, languages, tools } = data
     const tech = [role, level, ...languages, ...tools]
@@ -26,7 +26,7 @@ const Card = ({ data }) => {
 
             </div>
 
-            <Technologies tech={tech} />
+            <Technologies tech={tech} filter={filter} setIsFiltered={setIsFiltered} setFilter={setFilter} isFiltered={isFiltered} />
 
         </div>
     )
